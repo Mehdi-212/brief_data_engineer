@@ -1,0 +1,13 @@
+#Indique la version de la syntaxe Docker Compose
+version: '3'
+
+#conteneur
+services:
+  #nom du service
+  myapp:
+    #l'image doit être construite à partir du Dockerfile 
+    build: .
+    #monte le dossier local ./data sur le répertoire /app/data
+    volumes:
+      - ./data:/app/data
+    
